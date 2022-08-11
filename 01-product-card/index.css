@@ -1,1 +1,41 @@
 /* Смотри сколько снизу свободного места! Оно идеально подойдёт, чтобы писать твои стили! */
+/* будет сделано */
+body {
+	font-family: 'Arial';
+	font-style: normal;
+	background: #e5e5e5;
+	/* font-weight: 900;
+	font-size: 48px;
+	line-height: 72px; */
+}
+.container {
+	display: flex;
+	margin: 0 auto;
+	max-width: 1180px;
+	flex-direction: column;
+}
+
+.body-title {
+	margin: 0 auto;
+}
+.card-items {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+.item-card {
+	max-width: 380px;
+	height: 481px;
+	background: #ffffff;
+	border-radius: 12px;
+}
+.item-image {
+	border-top-right-radius: 12px;
+	border-top-left-radius: 12px;
+}
+.item-inner {
+	margin: 24px;
+}
+.item-text {
+	margin-top: 16px;
+}
