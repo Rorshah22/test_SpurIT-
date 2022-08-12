@@ -1,41 +1,169 @@
 /* Смотри сколько снизу свободного места! Оно идеально подойдёт, чтобы писать твои стили! */
 /* будет сделано */
-body {
-	font-family: 'Arial';
-	font-style: normal;
-	background: #e5e5e5;
-	/* font-weight: 900;
-	font-size: 48px;
-	line-height: 72px; */
-}
-.container {
-	display: flex;
-	margin: 0 auto;
-	max-width: 1180px;
-	flex-direction: column;
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
 }
 
-.body-title {
-	margin: 0 auto;
+ul,
+ol {
+	padding: 0;
+	list-style: none;
 }
+
+body,
+h1,
+h2,
+ul,
+ol,
+p,
+span {
+	margin: 0;
+}
+
+body {
+	font-family: 'Arial';
+	color: #000000;
+	background: #e5e5e5;
+}
+
+.container {
+	margin: 0 auto;
+	max-width: 1180px;
+}
+
+.main-title {
+	font-weight: 900;
+	font-size: 3rem;
+	line-height: 4.5rem;
+	margin: 2.5rem 0;
+	text-align: center;
+}
+
 .card-items {
 	display: flex;
-	flex-wrap: wrap;
 	justify-content: space-between;
+	flex-wrap: wrap;
 }
+
 .item-card {
-	max-width: 380px;
+	position: relative;
+	width: 380px;
 	height: 481px;
-	background: #ffffff;
+	background-color: #fff;
 	border-radius: 12px;
+	box-shadow: 0px 0px 45px -4px rgba(0, 0, 0, 0.18);
 }
-.item-image {
-	border-top-right-radius: 12px;
-	border-top-left-radius: 12px;
+
+.item-card__new {
+	top: 16px;
+	left: 16px;
+	line-height: 1.5rem;
+	padding: 0 16px;
+	position: absolute;
+	color: #2F2F2F;
+	background: #FDCFF3;
+	border-radius: 8px
 }
-.item-inner {
+
+.item-card__last {
+	top: 16px;
+	left: 143px;
+	padding: 0 16px;
+	line-height: 1.5rem;
+	position: absolute;
+	background: #FFCF56;
+	border-radius: 8px;
+}
+
+.item-card__image {
+	border-top-right-radius: inherit;
+	border-top-left-radius: inherit;
+}
+
+.item-card__main {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 	margin: 24px;
 }
-.item-text {
-	margin-top: 16px;
+
+.item-card__title a {
+	text-decoration: none;
+	color: #2F2F2F;
+}
+
+.item-card__text {
+	margin: 16px 0 24px;
+	height: 96px;
+	line-height: 1.56rem;
+	color: #2F2F2F;
+}
+
+.item-card__button {
+	text-align: center;
+	height: 48px;
+	font-weight: 900;
+	font-size: 1.125rem;
+	line-height: 1.56rem;
+	color: #42940F;
+	background: #FFFFFF;
+	border: 2px solid #42940F;
+	border-radius: 8px;
+	cursor: pointer;
+}
+
+.item-card__button:disabled {
+	text-transform: uppercase;
+	background: #4E4E4E;
+	color: #FFFFFF;
+	border: 1px solid #4E4E4E;
+	cursor: auto;
+}
+
+.item-card__button:hover:enabled {
+	color: #FFFFFF;
+	background: #42940F;
+}
+
+.item-card__button:active:enabled {
+	color: #FFFFFF;
+	background: #1F5200;
+}
+
+@media(max-width: 1220px) {
+	.container {
+		padding: 0 24px;
+
+	}
+
+	.card-items {
+		justify-content: space-around;
+	}
+
+	.item-card {
+		margin: 0 40px 40px;
+	}
+}
+
+@media(max-width: 529px) {
+	html {
+		font-size: 14px;
+	}
+
+	.main-title {
+		font-size: 2rem;
+		margin: 0;
+	}
+
+	.item-card {
+		margin: 20px 0;
+		max-width: 100%;
+		height: 100%;
+	}
+
+	.item-card__image {
+		width: 100%;
+	}
 }
